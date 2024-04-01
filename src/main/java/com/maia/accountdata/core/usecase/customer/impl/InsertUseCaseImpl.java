@@ -1,16 +1,16 @@
-package com.maia.accountdata.core.usecase.impl;
+package com.maia.accountdata.core.usecase.customer.impl;
 
 import com.maia.accountdata.core.dataprovider.FindAddressByZipCode;
-import com.maia.accountdata.core.dataprovider.InsertCustomer;
+import com.maia.accountdata.core.dataprovider.customer.InsertCustomer;
 import com.maia.accountdata.core.domain.Customer;
-import com.maia.accountdata.core.usecase.InsertCustomerUseCase;
+import com.maia.accountdata.core.usecase.customer.InsertUseCase;
 
-public class InsertCustomerUseCaseImpl implements InsertCustomerUseCase {
+public class InsertUseCaseImpl implements InsertUseCase {
 
     private final FindAddressByZipCode findAddressByZipCode;
     private final InsertCustomer insertCustomer;
 
-    public InsertCustomerUseCaseImpl(
+    public InsertUseCaseImpl(
             FindAddressByZipCode findAddressByZipCode,
             InsertCustomer insertCustomer) {
         this.findAddressByZipCode = findAddressByZipCode;
@@ -18,13 +18,13 @@ public class InsertCustomerUseCaseImpl implements InsertCustomerUseCase {
     }
 
     @Override
-    public void insert(Customer customer, String zipCode) {
+    public Customer insert(Customer customer, String zipCode) {
         var address = findAddressByZipCode.find(zipCode).orElseThrow(
                 ()-> new RuntimeException("Address not found.")
         );
 
         customer.setAddress(address);
-        insertCustomer.insert(customer);
+       return insertCustomer.insert(customer);
     }
 
 }

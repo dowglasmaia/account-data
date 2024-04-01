@@ -1,4 +1,4 @@
-package com.maia.accountdata.dataprovider;
+package com.maia.accountdata.dataprovider.client.impl;
 
 import com.maia.accountdata.core.dataprovider.FindAddressByZipCode;
 import com.maia.accountdata.core.domain.Address;

@@ -1,4 +1,4 @@
-package com.maia.accountdata.entrypoint.controller.request;
+package com.maia.accountdata.entrypoint.request;
 
 import lombok.Data;
 

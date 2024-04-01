@@ -1,6 +1,6 @@
-package com.maia.accountdata.dataprovider;
+package com.maia.accountdata.dataprovider.customer;
 
-import com.maia.accountdata.core.dataprovider.FindCustomerById;
+import com.maia.accountdata.core.dataprovider.customer.FindByIdCustomer;
 import com.maia.accountdata.core.domain.Customer;
 import com.maia.accountdata.dataprovider.repository.CustomerRepository;
 import com.maia.accountdata.dataprovider.repository.mapper.CustomerMapper;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 
 @Component
-public class FindCustomerByIdImpl implements FindCustomerById {
+public class FindByIdCustomerImpl implements FindByIdCustomer {
     @Autowired
     private CustomerRepository repository;
 
