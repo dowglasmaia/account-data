@@ -1,9 +1,9 @@
 package com.maia.accountdata.entrypoint.controller;
 
 import com.maia.accountdata.core.usecase.customer.*;
-import com.maia.accountdata.entrypoint.mapper.CustomerRequestMapper;
-import com.maia.accountdata.entrypoint.request.CustomerRequest;
-import com.maia.accountdata.entrypoint.response.CustomerResponse;
+import com.maia.accountdata.entrypoint.controller.mapper.CustomerRequestMapper;
+import com.maia.accountdata.entrypoint.controller.request.CustomerRequest;
+import com.maia.accountdata.entrypoint.controller.response.CustomerResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

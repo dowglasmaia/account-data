@@ -1,8 +1,8 @@
-package com.maia.accountdata.entrypoint.mapper;
+package com.maia.accountdata.entrypoint.controller.mapper;
 
 import com.maia.accountdata.core.domain.Customer;
-import com.maia.accountdata.entrypoint.request.CustomerRequest;
-import com.maia.accountdata.entrypoint.response.CustomerResponse;
+import com.maia.accountdata.entrypoint.controller.request.CustomerRequest;
+import com.maia.accountdata.entrypoint.controller.response.CustomerResponse;
 import org.mapstruct.Mapper;
 
 import java.util.List;

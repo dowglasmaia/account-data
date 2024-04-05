@@ -14,9 +14,10 @@ public class CustomerUseCaseConfig {
     @Bean
     public InsertUseCaseImpl insertCustomerUseCase(
             FindAddressByZipCodeImpl findAddressByZipCode,
-            InsertCustomerImpl insertCustomer
+            InsertCustomerImpl insertCustomer,
+            SendCpfForValidation sendCpfForValidation
     ) {
-        return new InsertUseCaseImpl(findAddressByZipCode, insertCustomer);
+        return new InsertUseCaseImpl(findAddressByZipCode, insertCustomer,sendCpfForValidation);
     }
 
     @Bean

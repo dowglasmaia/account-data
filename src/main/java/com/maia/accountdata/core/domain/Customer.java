@@ -6,7 +6,7 @@ public class Customer {
     private String name;
     private String cpf;
     private Address address;
-    private Boolean isValidCpf;
+    private Boolean isValidCpf=false;
 
     public Customer(String id, String name, String cpf, Address address, Boolean isValidCpf) {
         this.id = id;
@@ -17,7 +17,7 @@ public class Customer {
     }
 
     public Customer() {
-        this.isValidCpf = false;
+
     }
 
     public String getId() {

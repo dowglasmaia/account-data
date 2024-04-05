@@ -1,4 +1,4 @@
-package com.maia.accountdata.entrypoint.response;
+package com.maia.accountdata.entrypoint.controller.response;
 
 import lombok.Data;
 
