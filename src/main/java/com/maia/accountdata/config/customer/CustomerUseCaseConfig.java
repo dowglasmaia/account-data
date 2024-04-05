@@ -3,6 +3,8 @@ package com.maia.accountdata.config.customer;
 import com.maia.accountdata.core.dataprovider.FindAddressByZipCode;
 import com.maia.accountdata.core.dataprovider.customer.*;
 import com.maia.accountdata.core.usecase.customer.impl.*;
+import com.maia.accountdata.dataprovider.client.impl.FindAddressByZipCodeImpl;
+import com.maia.accountdata.dataprovider.customer.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,37 +13,37 @@ public class CustomerUseCaseConfig {
 
     @Bean
     public InsertUseCaseImpl insertCustomerUseCase(
-            FindAddressByZipCode findAddressByZipCode,
-            InsertCustomer insertCustomer
+            FindAddressByZipCodeImpl findAddressByZipCode,
+            InsertCustomerImpl insertCustomer
     ) {
         return new InsertUseCaseImpl(findAddressByZipCode, insertCustomer);
     }
 
     @Bean
     public UpdateUseCaseImpl updateUseCase(
-            FindAddressByZipCode findAddressByZipCode,
-            UpdateCustomer updateCustomer
+            FindAddressByZipCodeImpl findAddressByZipCode,
+            UpdateCustomerImpl updateCustomer
     ) {
         return new UpdateUseCaseImpl(findAddressByZipCode, updateCustomer);
     }
 
     @Bean
     public FindByIdUseCaseImpl findCustomerByIdUseCase(
-            FindByIdCustomer findByIdCustomer
+            FindByIdCustomerImpl findByIdCustomer
     ) {
         return new FindByIdUseCaseImpl(findByIdCustomer);
     }
 
     @Bean
     public FindAllUseCaseImpl findAllUseCase(
-            FindAllCustomer findAllCustomer
+            FindAllCustomerImpl findAllCustomer
     ) {
         return new FindAllUseCaseImpl(findAllCustomer);
     }
 
     @Bean
     public DeleteUseCaseImpl deleteUseCase(
-            DeleteCustomer deleteCustomer
+            DeleteCustomerImpl deleteCustomer
     ) {
         return new DeleteUseCaseImpl(deleteCustomer);
     }
